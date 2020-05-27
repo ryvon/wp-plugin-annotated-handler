@@ -1,5 +1,6 @@
 {
   "name": "ryvon/wp-plugin-annotated-handler",
+  "description": "Contains an abstract handler that read the actions and filters from annotations.",
   "homepage": "https://ryvon.com",
   "license": "MIT",
   "require": {
