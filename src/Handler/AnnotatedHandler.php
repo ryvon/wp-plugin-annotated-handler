@@ -6,7 +6,7 @@ use Doctrine\Common\Cache\ApcuCache;
 use Ryvon\Plugin\Handler\GenericHandlerInterface;
 use Ryvon\PluginAnnotatedHandler\Annotations\HookAnnotationReader;
 
-abstract class AnnotatedHookHandler implements GenericHandlerInterface
+abstract class AnnotatedHandler implements GenericHandlerInterface
 {
     /**
      * @var HookAnnotationReader

@@ -3,9 +3,9 @@
 namespace Ryvon\PluginAnnotatedHandler;
 
 use Ryvon\PluginAnnotatedHandler\Annotations\Annotation\Action;
-use Ryvon\PluginAnnotatedHandler\Handler\AnnotatedHookHandler;
+use Ryvon\PluginAnnotatedHandler\Handler\AnnotatedHandler;
 
-class AnnotatedWithActionsHandler extends AnnotatedHookHandler
+class AnnotatedWithActionsHandler extends AnnotatedHandler
 {
     /**
      * @Action("init")

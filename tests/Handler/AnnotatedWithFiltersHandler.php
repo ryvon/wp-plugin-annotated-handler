@@ -4,9 +4,9 @@ namespace Ryvon\PluginAnnotatedHandler;
 
 use Ryvon\PluginAnnotatedHandler\Annotations\Annotation\Action;
 use Ryvon\PluginAnnotatedHandler\Annotations\Annotation\Filter;
-use Ryvon\PluginAnnotatedHandler\Handler\AnnotatedHookHandler;
+use Ryvon\PluginAnnotatedHandler\Handler\AnnotatedHandler;
 
-class AnnotatedWithFiltersHandler extends AnnotatedHookHandler
+class AnnotatedWithFiltersHandler extends AnnotatedHandler
 {
     /**
      * @Filter("body_class")
