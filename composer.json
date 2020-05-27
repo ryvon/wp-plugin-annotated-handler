@@ -1,0 +1,21 @@
+{
+  "name": "ryvon/wp-plugin-annotated-handler",
+  "homepage": "https://ryvon.com",
+  "license": "MIT",
+  "require": {
+    "php": "^7.1",
+    "doctrine/annotations": "^1.10",
+    "doctrine/cache": "^1.10",
+    "ryvon/wp-plugin-base": "dev-master"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "phpunit/phpunit": "^7.5",
+    "brain/monkey": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ryvon\\PluginAnnotatedHandler\\": "./src"
+    }
+  }
+}
