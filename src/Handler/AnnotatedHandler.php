@@ -56,7 +56,7 @@ abstract class AnnotatedHandler implements GenericHandlerInterface
                         $hook->getTag(),
                         [$this, $hook->getMethodName()],
                         $hook->getPriority(),
-                        $hook->getArguments()
+                        $hook->getArgumentCount()
                     );
                     break;
 
@@ -65,7 +65,7 @@ abstract class AnnotatedHandler implements GenericHandlerInterface
                         $hook->getTag(),
                         [$this, $hook->getMethodName()],
                         $hook->getPriority(),
-                        $hook->getArguments()
+                        $hook->getArgumentCount()
                     );
                     break;
             }

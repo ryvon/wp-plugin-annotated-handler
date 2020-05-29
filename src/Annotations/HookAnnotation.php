@@ -27,7 +27,7 @@ class HookAnnotation
     /**
      * @var int
      */
-    private $arguments;
+    private $argumentCount;
 
     /**
      * @var bool
@@ -44,7 +44,7 @@ class HookAnnotation
      * @param string $tag
      * @param string $methodName
      * @param int $priority
-     * @param int $arguments
+     * @param int $argumentCount
      * @param bool $onlyAdmin
      * @param bool $onlyFrontend
      */
@@ -53,7 +53,7 @@ class HookAnnotation
         string $tag,
         string $methodName,
         int $priority,
-        int $arguments,
+        int $argumentCount,
         bool $onlyAdmin,
         bool $onlyFrontend
     ) {
@@ -61,7 +61,7 @@ class HookAnnotation
         $this->tag = $tag;
         $this->methodName = $methodName;
         $this->priority = $priority;
-        $this->arguments = $arguments;
+        $this->argumentCount = $argumentCount;
         $this->onlyAdmin = $onlyAdmin;
         $this->onlyFrontend = $onlyFrontend;
     }
@@ -101,9 +101,9 @@ class HookAnnotation
     /**
      * @return int
      */
-    public function getArguments(): int
+    public function getArgumentCount(): int
     {
-        return $this->arguments;
+        return $this->argumentCount;
     }
 
     /**
