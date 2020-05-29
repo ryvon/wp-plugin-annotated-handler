@@ -16,8 +16,6 @@ class AnnotatedWithFiltersHandler extends AnnotatedHandler
      */
     public function onlyTag($classes): array
     {
-        $classes[] = __METHOD__;
-
         return $classes;
     }
 
@@ -29,7 +27,6 @@ class AnnotatedWithFiltersHandler extends AnnotatedHandler
      */
     public function withOptionsFrontend($content): string
     {
-        $content .= __METHOD__;
         return $content;
     }
 
@@ -41,7 +38,6 @@ class AnnotatedWithFiltersHandler extends AnnotatedHandler
      */
     public function withOptionsAdmin($content): string
     {
-        $content .= __METHOD__;
         return $content;
     }
 
@@ -55,12 +51,28 @@ class AnnotatedWithFiltersHandler extends AnnotatedHandler
      */
     public function withArguments($info, $user, $blogName)
     {
-        if (!is_array($info)) {
-            return $info;
-        }
-
-        echo __METHOD__;
-
         return $info;
+    }
+
+    /**
+     * @Filter("body_class")
+     *
+     * @param array $classes
+     * @return array
+     */
+    protected function ignoredProtectedFunction($classes): array
+    {
+        return $classes;
+    }
+
+    /**
+     * @Filter("body_class")
+     *
+     * @param array $classes
+     * @return array
+     */
+    private function ignoredPrivateFunction($classes): array
+    {
+        return $classes;
     }
 }

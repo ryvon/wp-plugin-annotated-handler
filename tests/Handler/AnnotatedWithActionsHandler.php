@@ -12,7 +12,6 @@ class AnnotatedWithActionsHandler extends AnnotatedHandler
      */
     public function onlyTag(): void
     {
-        echo __METHOD__;
     }
 
     /**
@@ -20,7 +19,6 @@ class AnnotatedWithActionsHandler extends AnnotatedHandler
      */
     public function withOptionsAdmin(): void
     {
-        echo __METHOD__;
     }
 
     /**
@@ -28,7 +26,6 @@ class AnnotatedWithActionsHandler extends AnnotatedHandler
      */
     public function withOptionsFrontend(): void
     {
-        echo __METHOD__;
     }
 
     /**
@@ -41,5 +38,19 @@ class AnnotatedWithActionsHandler extends AnnotatedHandler
     public function withArguments($domain, $mofile)
     {
         return [];
+    }
+
+    /**
+     * @Action("init")
+     */
+    protected function ignoredProtectedFunction()
+    {
+    }
+
+    /**
+     * @Action("init")
+     */
+    private function ignoredPrivateFunction()
+    {
     }
 }
