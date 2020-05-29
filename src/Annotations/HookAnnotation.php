@@ -17,7 +17,7 @@ class HookAnnotation
     /**
      * @var string
      */
-    private $method;
+    private $methodName;
 
     /**
      * @var int
@@ -42,7 +42,7 @@ class HookAnnotation
     /**
      * @param string $type
      * @param string $tag
-     * @param string $method
+     * @param string $methodName
      * @param int $priority
      * @param int $arguments
      * @param bool $onlyAdmin
@@ -51,7 +51,7 @@ class HookAnnotation
     public function __construct(
         string $type,
         string $tag,
-        string $method,
+        string $methodName,
         int $priority,
         int $arguments,
         bool $onlyAdmin,
@@ -59,7 +59,7 @@ class HookAnnotation
     ) {
         $this->type = $type;
         $this->tag = $tag;
-        $this->method = $method;
+        $this->methodName = $methodName;
         $this->priority = $priority;
         $this->arguments = $arguments;
         $this->onlyAdmin = $onlyAdmin;
@@ -85,9 +85,9 @@ class HookAnnotation
     /**
      * @return string
      */
-    public function getMethod(): string
+    public function getMethodName(): string
     {
-        return $this->method;
+        return $this->methodName;
     }
 
     /**

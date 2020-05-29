@@ -56,7 +56,7 @@ class HookAnnotationReaderTest extends TestCase
     {
         $this->assertEquals($expected->getType(), $result->getType());
         $this->assertEquals($expected->getTag(), $result->getTag());
-        $this->assertEquals($expected->getMethod(), $result->getMethod());
+        $this->assertEquals($expected->getMethodName(), $result->getMethodName());
         $this->assertEquals($expected->getPriority(), $result->getPriority());
         $this->assertEquals($expected->getArguments(), $result->getArguments());
         $this->assertEquals($expected->isOnlyAdmin(), $result->isOnlyAdmin());

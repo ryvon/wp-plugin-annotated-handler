@@ -54,7 +54,7 @@ abstract class AnnotatedHandler implements GenericHandlerInterface
                 case 'filter':
                     \add_filter(
                         $hook->getTag(),
-                        [$this, $hook->getMethod()],
+                        [$this, $hook->getMethodName()],
                         $hook->getPriority(),
                         $hook->getArguments()
                     );
@@ -63,7 +63,7 @@ abstract class AnnotatedHandler implements GenericHandlerInterface
                 case 'action':
                     \add_action(
                         $hook->getTag(),
-                        [$this, $hook->getMethod()],
+                        [$this, $hook->getMethodName()],
                         $hook->getPriority(),
                         $hook->getArguments()
                     );
