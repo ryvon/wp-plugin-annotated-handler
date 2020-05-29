@@ -2,9 +2,6 @@
 
 namespace Ryvon\PluginAnnotatedHandler\Annotations;
 
-require_once __DIR__ . '/../Handler/AnnotatedWithActionsHandler.php';
-require_once __DIR__ . '/../Handler/AnnotatedWithFiltersHandler.php';
-
 use PHPUnit\Framework\TestCase;
 use Ryvon\PluginAnnotatedHandler\AnnotatedWithActionsHandler;
 use Ryvon\PluginAnnotatedHandler\AnnotatedWithFiltersHandler;
@@ -26,7 +23,7 @@ class HookAnnotationReaderTest extends TestCase
 
         $this->assertCount(count($expected), $result);
 
-        foreach($expected as $index => $expectedItem) {
+        foreach ($expected as $index => $expectedItem) {
             $this->assertHookAnnotationEquals($expectedItem, $result[$index]);
         }
     }
@@ -46,11 +43,15 @@ class HookAnnotationReaderTest extends TestCase
 
         $this->assertCount(count($expected), $result);
 
-        foreach($expected as $index => $expectedItem) {
+        foreach ($expected as $index => $expectedItem) {
             $this->assertHookAnnotationEquals($expectedItem, $result[$index]);
         }
     }
 
+    /**
+     * @param HookAnnotation $expected
+     * @param HookAnnotation $result
+     */
     protected function assertHookAnnotationEquals(HookAnnotation $expected, HookAnnotation $result)
     {
         $this->assertEquals($expected->getType(), $result->getType());
